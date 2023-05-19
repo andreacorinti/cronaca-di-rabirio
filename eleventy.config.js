@@ -18,6 +18,12 @@ module.exports = function(eleventyConfig) {
 		"./node_modules/prismjs/themes/prism-okaidia.css": "/css/prism-okaidia.css"
 	});
 
+	// Personaggi
+
+	eleventyConfig.addCollection("personaggi", function(collectionApi) {
+		return collectionApi.getFilteredByGlob("./content/personaggi/*.md");
+	  });
+
 	// Run Eleventy when these files change:
 	// https://www.11ty.dev/docs/watch-serve/#add-your-own-watch-targets
 
